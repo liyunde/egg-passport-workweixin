@@ -1,6 +1,6 @@
 {
   "name": "egg-passport-workweixin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "work weixin passport plugin for egg",
   "main": "app.js",
   "engines": {
@@ -10,7 +10,7 @@
     "name": "passportWorkweixin",
     "dependencies": [
       "passport",
-      "ioredis"
+      "redis"
     ]
   },
   "dependencies": {
