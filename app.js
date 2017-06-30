@@ -2,7 +2,7 @@
 
 const debug = require('debug')('egg-passport-workweixin');
 const assert = require('assert');
-const Strategy = require('lib/index').Strategy;
+const Strategy = require('./lib/index').Strategy;
 
 module.exports = app => {
 

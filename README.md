@@ -25,6 +25,8 @@ exports.passportWorkWeiXin = {
 exports.passportWorkWeiXin = {
   key: 'your oauth key',
   secret: 'your oauth secret',
+  agentId: 0,
+  callbackURL: '/passport/workweixin/callback'
 };
 ```
 
