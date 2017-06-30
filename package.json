@@ -13,8 +13,10 @@
     ]
   },
   "dependencies": {
-    "debug": "^2.6.1",
-    "passport-weixin-enterprise-mobile": "^1.0.1"
+    "passport-oauth2": "1.x.x",
+    "querystring": "^0.2.0",
+    "urllib": "^2.9.1",
+    "debug": "^2.6.1"
   },
   "devDependencies": {
     "autod": "^2.7.1",
@@ -38,7 +40,8 @@
   },
   "files": [
     "app.js",
-    "config"
+    "config",
+    "lib"
   ],
   "ci": {
     "version": "6,7,8"
