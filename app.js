@@ -13,14 +13,22 @@ module.exports = app => {
   assert(config.key, '[egg-passport-workweixin] config.passportWorkweixin.key required');
   assert(config.secret, '[egg-passport-workweixin] config.passportWorkweixin.secret required');
 
-  assert(config.cache, '[egg-passport-workweixin] config.passportWorkweixin.cache required');
-
   config.clientID = config.key;
   config.clientSecret = config.secret;
 
   config.requireState = false;
 
+  config.cache = {};
 
+  config.cache.get = app.redis.get;
+
+  config.cache.save = function (key, val, exp) {
+
+    app.redis.set(key, val);
+
+    if (exp) app.redis.expire(key, exp);
+
+  };
   /**
    * 获取用户的回调
    */
