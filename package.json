@@ -1,6 +1,6 @@
 {
   "name": "egg-passport-workweixin",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "work weixin passport plugin for egg",
   "main": "app.js",
   "engines": {

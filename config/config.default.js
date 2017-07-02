@@ -1,6 +1,6 @@
 'use strict';
 
-exports.passportWorkWeiXin = {
+exports.passportWorkweixin = {
   key: '',
   secret: '',
   callbackURL: '/passport/workweixin/callback',

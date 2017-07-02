@@ -6,26 +6,34 @@ const Strategy = require('passport-workweixin').Strategy;
 
 module.exports = app => {
 
-  const config = app.config.passportWorkWeiXin;
+  const config = app.config.passportWorkweixin;
+
   config.passReqToCallback = true;
-  assert(config.key, '[egg-passport-workweixin] config.passportWorkWeiXin.key required');
-  assert(config.secret, '[egg-passport-workweixin] config.passportWorkWeiXin.secret required');
+
+  assert(config.key, '[egg-passport-workweixin] config.passportWorkweixin.key required');
+  assert(config.secret, '[egg-passport-workweixin] config.passportWorkweixin.secret required');
+
+  assert(config.cache, '[egg-passport-workweixin] config.passportWorkweixin.cache required');
 
   config.clientID = config.key;
   config.clientSecret = config.secret;
 
   config.requireState = false;
 
-  app.passport.use('workweixin', new Strategy(config, (req, accessToken, refreshToken, params, profile, done) => {
+
+  /**
+   * 获取用户的回调
+   */
+  app.passport.use('workweixin', new Strategy(config, (req, accessToken, ticket, params, profile, done) => {
     // format user
     const user = {
       provider: 'workweixin',
       id: profile.id,
       name: profile.username,
       displayName: profile.displayName,
-      photo: profile.photos && profile.photos[0] && profile.photos[0].value,
+      photo: profile.photo,
       accessToken,
-      refreshToken,
+      ticket,
       params,
       profile,
     };
