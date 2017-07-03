@@ -18,17 +18,8 @@ module.exports = app => {
 
   config.requireState = false;
 
-  config.cache = {};
+  config.cache = app.redis;
 
-  config.cache.get = app.redis.get;
-
-  config.cache.save = function (key, val, exp) {
-
-    app.redis.set(key, val);
-
-    if (exp) app.redis.expire(key, exp);
-
-  };
   /**
    * 获取用户的回调
    */
@@ -40,10 +31,9 @@ module.exports = app => {
       name: profile.username,
       displayName: profile.displayName,
       photo: profile.photo,
-      accessToken,
-      ticket,
-      params,
-      profile,
+      // accessToken,
+      // ticket,
+      profile
     };
 
     // {
