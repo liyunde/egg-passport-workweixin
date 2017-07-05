@@ -17,7 +17,7 @@
     "debug": "^2.6.1",
     "oauth": "^0.9.15",
     "passport-oauth2": "1.x.x",
-    "passport-workweixin": "https://github.com/liyunde/passport-workweixin",
+    "passport-workweixin": "^0.4.0",
     "querystring": "^0.2.0",
     "urllib": "^2.9.1"
   },
