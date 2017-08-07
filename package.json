@@ -1,6 +1,6 @@
 {
   "name": "egg-passport-workweixin",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "work weixin passport plugin for egg",
   "main": "app.js",
   "engines": {
@@ -14,22 +14,18 @@
     ]
   },
   "dependencies": {
-    "debug": "^2.6.1",
-    "oauth": "^0.9.15",
-    "passport-oauth2": "1.x.x",
-    "passport-workweixin": "^0.4.0",
-    "querystring": "^0.2.0",
-    "urllib": "^2.9.1"
+    "debug": "^2.6.8",
+    "passport-workweixin": "^0.4.1"
   },
   "devDependencies": {
-    "autod": "^2.7.1",
-    "egg": "^0.12.0",
-    "egg-bin": "^2.2.1",
-    "egg-ci": "^1.1.0",
+    "autod": "^2.8.0",
+    "egg": "^1.6.0",
+    "egg-bin": "^4.0.5",
+    "egg-ci": "^1.8.0",
     "egg-mock": "^3.0.0",
     "egg-passport": "^1.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-egg": "^3.2.0",
+    "eslint": "^4.1.1",
+    "eslint-config-egg": "^5.0.0",
     "ioredis": "^3.1.1",
     "supertest": "^3.0.0",
     "webstorm-disable-index": "^1.1.2"
